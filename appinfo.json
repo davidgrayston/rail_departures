@@ -15,6 +15,11 @@
           "file": "images/rail_departures.png",
           "name": "IMAGE_MENU_ICON",
           "type": "png"
+        },
+        {
+          "file": "images/powered_by.png",
+          "name": "POWERED_BY",
+          "type": "png"
         }
       ]
     },
