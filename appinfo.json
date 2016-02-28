@@ -10,7 +10,13 @@
     "longName": "Rail Departures",
     "projectType": "native",
     "resources": {
-        "media": []
+      "media": [
+        {
+          "file": "images/rail_departures.png",
+          "name": "IMAGE_MENU_ICON",
+          "type": "png"
+        }
+      ]
     },
     "sdkVersion": "3",
     "shortName": "Rail Departures",
