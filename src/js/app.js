@@ -30,7 +30,7 @@ var getXmlValue = function(name, xml) {
 /**
  * Get departure board.
  */
-function getArrivals() {
+function getDepartures() {
   // SOAP URL.
   var url = "https://lite.realtime.nationalrail.co.uk/OpenLDBWS/ldb7.asmx";
 
@@ -118,12 +118,12 @@ Pebble.addEventListener('webviewclosed', function(e) {
  * Get departures when app is opened.
  */
 Pebble.addEventListener('ready', function(e) {
-  getArrivals();
+  getDepartures();
 });
 
 /**
  * Get departures when an AppMessage is received.
  */
 Pebble.addEventListener('appmessage', function(e) {
-  getArrivals();
+  getDepartures();
 });
