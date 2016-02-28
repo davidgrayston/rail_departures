@@ -38,7 +38,7 @@ function getArrivals() {
   var body = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:typ="http://thalesgroup.com/RTTI/2013-11-28/Token/types" xmlns:ldb="http://thalesgroup.com/RTTI/2015-05-14/ldb/">\
   <soapenv:Header>\
       <typ:AccessToken>\
-         <typ:TokenValue>' + localStorage.getItem('apiKey') + '</typ:TokenValue>\
+         <typ:TokenValue>' + localStorage.getItem('api_key') + '</typ:TokenValue>\
       </typ:AccessToken>\
    </soapenv:Header>\
    <soapenv:Body>\
@@ -111,7 +111,7 @@ Pebble.addEventListener('showConfiguration', function() {
 Pebble.addEventListener('webviewclosed', function(e) {
   var configData = JSON.parse(decodeURIComponent(e.response));
   localStorage.setItem('station', configData['station']);
-  localStorage.setItem('apiKey', configData['apiKey']);
+  localStorage.setItem('api_key', configData['api_key']);
 });
 
 /**

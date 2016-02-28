@@ -3,7 +3,7 @@
         "apidata": 0
     },
     "capabilities": [
-        ""
+      "configurable"
     ],
     "companyName": "David Grayston",
     "enableMultiJS": true,

@@ -49,18 +49,17 @@
   <script>
   function getConfigData() {
     var station = document.getElementById('station');
-    var apiKey = document.getElementById('api_key');
+    var api_key = document.getElementById('api_key');
  
     var options = {
       'station': station.value,
-      'apiKey': apiKey.value
+      'api_key': api_key.value
     };
 
     // Save for next launch
-    localStorage['station'] = options['station'];
-    localStorage['apiKey'] = options['apiKey'];
+    localStorage.setItem('station', options['station']);
+    localStorage.setItem('api_key', options['api_key']);
 
-    console.log('Got options: ' + JSON.stringify(options));
     return options;
   }
 
@@ -87,12 +86,14 @@
 
   (function() {
     var station = document.getElementById('station');
-    var apiKey = document.getElementById('apiKey');
+    var api_key = document.getElementById('api_key');
 
     // Load any previously saved configuration, if available
-    if(localStorage['station']) {
-      station.value = localStorage['station'];
-      apiKey.value = localStorage['apiKey'];
+    if(localStorage.getItem('station')) {
+      station.value = localStorage.getItem('station');
+    }
+    if(localStorage.getItem('api_key')) {
+      api_key.value = localStorage.getItem('api_key');
     }
   })();
   </script>
